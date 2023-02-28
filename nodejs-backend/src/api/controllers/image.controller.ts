@@ -9,8 +9,8 @@ class ImageController {
       * @returns paginate image list
     */
     list(req: Request, res: Response) {
-        const { start, pageSize } = req.query;
-        res.status(200).json(imageService.getImages(Number(start), Number(pageSize)));
+        const { start, end } = req.query;
+        res.status(200).json(imageService.getImages(Number(start), Number(end)));
     }
 
     /**

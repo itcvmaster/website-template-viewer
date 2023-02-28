@@ -1,25 +1,23 @@
-import { ImageModal } from '@/models/image';
+import { ImageModel } from '@/models/image';
 import template from '@data/template.json';
 
-export const ImageData: ImageModal[] = template;
+export const ImageData: ImageModel[] = template;
 
 class ImageService {
     /**
      * get the images list
-     * @param {number} start is start index of data. if start index is -1 or undefined, return empty.
+     * @param {number} start is start index of data. if start index is < 0 or undefined, return empty.
      * @param {number} end is end index of data.
-     * @returns {results, pagination}
+     * @returns {images, start, end, total}
      */
     getImages(start: number, end: number) {
         // if pageSize is negative, returns full data
-        if (start === -1) {
+        if (start < 0 || start === undefined) {
             return {
-                results: [],
-                pagination: {
-                    start: 0,
-                    end: 0,
-                    total: ImageData.length
-                }
+                images: [],
+                start: 0,
+                end: 0,
+                total: ImageData.length
             };
         }
 
@@ -28,12 +26,10 @@ class ImageService {
         end = Math.min(end, ImageData.length);
 
         return {
-            results: ImageData.slice(start, end),
-            pagination: {
-                start: start,
-                end: end,
-                total: ImageData.length
-            }
+            images: ImageData.slice(start, end),
+            start: 0,
+            end: 0,
+            total: ImageData.length
         }
     }
 
