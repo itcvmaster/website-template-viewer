@@ -30,19 +30,18 @@ I implemented some additional features for scalability.
 - Extensible api management using RTK including
 - Caching & storing api response on Redux using RTK
 - API response validation by adding my own type checking logic
-
-```
-If you run the app locally, you can see these logs in the console to notify you there are type mis-matches.
-Example Images Validation:
-  [images][0].[cost] type should be [number], but it is [string].
-  [images][0].[id] type should be [number], but it is [string].
-  [images][1].[cost] type should be [number], but it is [string].
-  [images][1].[id] type should be [number], but it is [string].
-  [images][2].[cost] type should be [number], but it is [string].
-  [images][2].[id] type should be [number], but it is [string].
-  [images][3].[cost] type should be [number], but it is [string].
-  [images][3].[id] type should be [number], but it is [string].
-```
+  - If you run the app locally, you can see these logs in the console to notify you there are type mis-matches.
+  ```
+  Example Images Validation:
+    [images][0].[cost] type should be [number], but it is [string].
+    [images][0].[id] type should be [number], but it is [string].
+    [images][1].[cost] type should be [number], but it is [string].
+    [images][1].[id] type should be [number], but it is [string].
+    [images][2].[cost] type should be [number], but it is [string].
+    [images][2].[id] type should be [number], but it is [string].
+    [images][3].[cost] type should be [number], but it is [string].
+    [images][3].[id] type should be [number], but it is [string].
+  ```
 ## Screenshots
 
 ![Snapshots](https://bitbucket.org/kw413/website-template-viewer/raw/fd470611681aa1822bbe2732486d13f3bdb6fc1f/snapshots.gif)
