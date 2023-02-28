@@ -18,7 +18,7 @@ export function Home() {
                 start: start,
                 end: end
             }
-        }).unwrap().then((result) => {
+        }, true).unwrap().then((result) => {
             if (result.isError) {
                 return;
             }

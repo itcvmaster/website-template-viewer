@@ -75,6 +75,7 @@ header {
 	position: relative;
 	padding: 10px 45px;
 	width: 660px;
+	min-height: 140px;
 }
 
 .thumbnails a {

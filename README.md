@@ -1,45 +1,61 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Code ChallengeCode Challenge #
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+## Table of Content:
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+- [About The App](#about-the-app)
+- [Mandantory Requirements](#mandantory-requirements)
+- [Bonus features](#bonus-features)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Future Works](#future-works)
 
----
+## About The App
+This project is to develop a website template viewer, which is modeled after the filmstrip folder view in Windows Explorer.
 
-## Edit a file
+## Mandantory Requirements ##
+- Display the thumbnail images in a filmstrip view below the main large image
+- Set the thumbnail to have a sliding window with 4 thumbnails visible in the window at a time. 
+- Implement a "next" and "previous" link per the styles provided. The sliding window is not circular, when the first 4 thumbnails appear, the previous link should be disabled. When the end of the thumbnail set is reached, the next link should be disabled.
+  Note: The sliding window may not have a total of 4 thumbnails if the total template count is not evenly divisible by 4. There are 15 templates in the reference data.
+- Example: If there are 15 templates total, then the initial view would show 4 thumbnail images with previous disabled, then clicking "Next" would advance to the next 4 images, next would advance to the next 4, and so on. Finally, there wouild only be 3 images in the sliding window with next disabled and previous enabled.
+- When clicking on a thumbnail, the large image corresponding to that thumbnail should appear in the main window, along with the meta data about that template (ID, Cost, Description, Thumbnail File Name, Image File Name)
+- Per the reference styles and html, the thumbnail image should have a border when selected.
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+## Bonus features ##
+I implemented some additional features for scalability.
+- Routing using react-router
+- Redux based state management using RTK(Redux-ToolKit).(But just a placeholder)
+- Extensible api management using RTK including
+- Caching & storing api response on Redux using RTK
+- API response validation by adding my own type checking logic
+```
+If you run the app locally, you can see these logs in the console to notify you there are type mis-matches.
+Example Images Validation:
+  [images][0].[cost]'s type should be [number], but it is [string].
+  [images][0].[id]'s type should be [number], but it is [string].
+  [images][1].[cost]'s type should be [number], but it is [string].
+  [images][1].[id]'s type should be [number], but it is [string].
+  [images][2].[cost]'s type should be [number], but it is [string].
+  [images][2].[id]'s type should be [number], but it is [string].
+  [images][3].[cost]'s type should be [number], but it is [string].
+  [images][3].[id]'s type should be [number], but it is [string].
+```
+## Screenshots
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+`![Snapshots](https://bitbucket.org/kw413/website-template-viewer/src/master/snapshots.gif)`
 
----
 
-## Create a file
+## Technologies
+Frontend: `React`, `Redux Toolkit`, `react-router`, `javascript`
+Backend: `Node.js`, `Express.js`, `Typescript`
 
-Next, you’ll add a new file to this repository.
+## Setup
+- Download or clone the repository
+- Follow this [document](./image-viewer/README.md) to run backend locally. 
+- Follow this [document](./nodejs-backend/README.md) to run frontend locally. 
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+## Future Works
+- CSS should be refined to make it look better
+- Move assets to CDN and optimize them to reduce the loading time. (`*.webp` and `*.svg` are preferred )
+- Extend Redux based state management for complex data flow

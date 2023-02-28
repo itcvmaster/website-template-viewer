@@ -2,8 +2,8 @@ import { DataTypes } from "api/type-check";
 
 export const ImageModel = {
     title: DataTypes.String,
-    cost: DataTypes.String,
-    id: DataTypes.String,
+    cost: DataTypes.Number,
+    id: DataTypes.Number,
     description: DataTypes.String,
     thumbnail: DataTypes.String,
     image: DataTypes.String,
