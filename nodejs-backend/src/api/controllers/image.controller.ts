@@ -10,7 +10,8 @@ class ImageController {
     */
     list(req: Request, res: Response) {
         const { start, end } = req.query;
-        res.status(200).json(imageService.getImages(Number(start), Number(end)));
+        const images = imageService.getImages(Number(start), Number(end));
+        res.status(200).json(images);
     }
 
     /**

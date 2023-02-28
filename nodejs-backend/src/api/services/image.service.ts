@@ -27,8 +27,8 @@ class ImageService {
 
         return {
             images: ImageData.slice(start, end),
-            start: 0,
-            end: 0,
+            start: start,
+            end: end,
             total: ImageData.length
         }
     }
