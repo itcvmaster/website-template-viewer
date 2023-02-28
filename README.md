@@ -24,22 +24,24 @@ This project is to develop a website template viewer, which is modeled after the
 
 ## Bonus features ##
 I implemented some additional features for scalability.
+
 - Routing using react-router
 - Redux based state management using RTK(Redux-ToolKit).(But just a placeholder)
 - Extensible api management using RTK including
 - Caching & storing api response on Redux using RTK
 - API response validation by adding my own type checking logic
+
 ```
 If you run the app locally, you can see these logs in the console to notify you there are type mis-matches.
 Example Images Validation:
-  [images][0].[cost]'s type should be [number], but it is [string].
-  [images][0].[id]'s type should be [number], but it is [string].
-  [images][1].[cost]'s type should be [number], but it is [string].
-  [images][1].[id]'s type should be [number], but it is [string].
-  [images][2].[cost]'s type should be [number], but it is [string].
-  [images][2].[id]'s type should be [number], but it is [string].
-  [images][3].[cost]'s type should be [number], but it is [string].
-  [images][3].[id]'s type should be [number], but it is [string].
+  [images][0].[cost] type should be [number], but it is [string].
+  [images][0].[id] type should be [number], but it is [string].
+  [images][1].[cost] type should be [number], but it is [string].
+  [images][1].[id] type should be [number], but it is [string].
+  [images][2].[cost] type should be [number], but it is [string].
+  [images][2].[id] type should be [number], but it is [string].
+  [images][3].[cost] type should be [number], but it is [string].
+  [images][3].[id] type should be [number], but it is [string].
 ```
 ## Screenshots
 
