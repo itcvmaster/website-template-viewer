@@ -1,10 +1,12 @@
 const FALLBACK_URL = "./no_image.jpeg";
+
 function MainImage(props) {
     const { selectedThumb } = props;
+    const path = `./large/${selectedThumb?.image}`;
     return (
         <div id="large">
             <img
-                src={"./large/" + selectedThumb?.image}
+                src={path}
                 alt={selectedThumb?.thumbnail}
                 loading="lazy"
                 onError={(e) => {
@@ -12,6 +14,7 @@ function MainImage(props) {
                     e.target.src = FALLBACK_URL;
                 }}
             />
+
             <div className="details">
                 <strong> ID </strong>
                 <p> {selectedThumb?.id || "N/A"} </p>

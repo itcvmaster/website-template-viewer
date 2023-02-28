@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import TestApi from "api";
 import MainImage from "components/MainImage";
 import ImageThumb from "components/ImageThumb";
@@ -9,7 +10,7 @@ export function Home() {
     const [imageCount, setImageCount] = useState(0);
     const [thumbnails, setThumbnails] = useState([]);
     const [start, setStart] = useState(0);
-    const [end, setEnd] = useState(4);
+    const [end, setEnd] = useState(MAX_THUMBS);
     const [getImagesQuery] = TestApi.useLazyGetImagesQuery();
 
     useEffect(() => {
@@ -57,6 +58,7 @@ export function Home() {
                     className={"previous" + (start <= 0 ? " disabled" : "")}
                     onClick={handlePrev}
                 />
+
                 {thumbnails.map((thumbnail, index) => (
                     <ImageThumb
                         key={index}
@@ -65,6 +67,7 @@ export function Home() {
                         onClick={() => setSelectThumb(thumbnail)}
                     />
                 ))}
+                
                 <button
                     className={"next" + (end >= imageCount ? " disabled" : "")}
                     onClick={handleNext}

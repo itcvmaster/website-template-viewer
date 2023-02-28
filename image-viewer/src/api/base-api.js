@@ -7,6 +7,7 @@ export const baseQuery = fetchBaseQuery({
     baseUrl: process.env.REACT_APP_API_URL,
    
 });
+
 /**
  * 
  * @param {*} response A response from backend

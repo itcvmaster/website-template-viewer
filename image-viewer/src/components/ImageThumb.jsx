@@ -1,6 +1,9 @@
 function ImageThumb(props) {
     const { thumbnail, isSelected, onClick } = props;
+    const path = `./thumbnails/${thumbnail.thumbnail}`;
+    
     return (
+        // TODO: Recommend to use <div> instead of <a> below
         // eslint-disable-next-line
         <a
             role="button"
@@ -8,7 +11,7 @@ function ImageThumb(props) {
             onClick={onClick}
         >
             <img
-                src={"./thumbnails/" + thumbnail.thumbnail}
+                src={path}
                 alt={thumbnail.thumbnail}
                 className={isSelected ? "active" : ""}
             />
