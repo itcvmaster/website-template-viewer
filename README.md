@@ -43,7 +43,7 @@ Example Images Validation:
 ```
 ## Screenshots
 
-`![Snapshots](https://bitbucket.org/kw413/website-template-viewer/src/master/snapshots.gif)`
+![Snapshots](https://bitbucket.org/kw413/website-template-viewer/src/master/snapshots.gif)
 
 
 ## Technologies
