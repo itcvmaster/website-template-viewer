@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const initUser = {};
+export const initialState = {};
 
+/**
+ * There is no need to use Redux in this test.
+ * This is just a placeholder
+ */
 const appSlice = createSlice({
     name: "app", // the way it will look in the store
-    initialState: initUser,
+    initialState: initialState,
     reducers: {
-        clearApp(state, action) {
-            console.log("clear app data: ", state, action);
-        },
+        initApp(_state, _action) {},
     },
 });
 

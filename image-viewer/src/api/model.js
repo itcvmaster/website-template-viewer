@@ -1,21 +1,23 @@
-import { DataTypes } from "utils/type-check";
+import { DataTypes } from "api/type-check";
 
 export const ImageModel = {
-    count: DataTypes.Number,
-    data: DataTypes.Array(UserModel),
-    has_more: DataTypes.Boolean,
-    object: DataTypes.Optional(DataTypes.String),
+    title: DataTypes.String,
+    cost: DataTypes.String,
+    id: DataTypes.String,
+    description: DataTypes.String,
+    thumbnail: DataTypes.String,
+    image: DataTypes.String,
 
     $name: "ImageModel",
     $isCustomObject: true,
 };
 
-export const ImageModels = {
-    count: DataTypes.Number,
-    data: DataTypes.Array(ImageModel),
-    has_more: DataTypes.Boolean,
-    object: DataTypes.Optional(DataTypes.String),
+export const ImagesModel = {
+    images: DataTypes.Array(ImageModel),
+    start: DataTypes.Optional(DataTypes.Number),
+    end: DataTypes.Optional(DataTypes.Number),
+    total: DataTypes.Number,
 
-    $name: "ImageModels",
+    $name: "ImagesModel",
     $isCustomObject: true,
 };

@@ -81,7 +81,7 @@ export const detectInvalids = (object, model, params = "") => {
         }
 
         // Existence check
-        if (value == undefined) {
+        if (!value) {
             if (!expectedType.sOptional) {
                 errors += `  ${params}[${variable}] is missing.\n`;
             }

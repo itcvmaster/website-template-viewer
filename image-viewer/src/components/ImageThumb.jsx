@@ -1,7 +1,9 @@
 function ImageThumb(props) {
     const { thumbnail, isSelected, onClick } = props;
     return (
-        <a 
+        // eslint-disable-next-line
+        <a
+            role="button"
             className={isSelected ? "active" : ""}
             onClick={onClick}
         >

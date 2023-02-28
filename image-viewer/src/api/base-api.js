@@ -5,21 +5,7 @@ import { fetchBaseQuery } from "@reduxjs/toolkit/query/react";
  */
 export const baseQuery = fetchBaseQuery({
     baseUrl: process.env.REACT_APP_API_URL,
-    prepareHeaders: async (headers, { getState }) => {
-
-        // TODO: Actually, we don't need this, as there is 
-        // no authentication feature in this test. But 
-        // I added the following code to show an example.
-        const state = getState();
-        const accessToken = state.user?.accessToken;
-
-        // Add Bearere Token to request headers
-        if (accessToken) {
-            headers.set("Authorization", `Bearer ${accessToken}`);
-        }
-
-        return headers;
-    },
+   
 });
 /**
  * 
