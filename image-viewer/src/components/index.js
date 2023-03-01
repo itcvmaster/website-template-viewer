@@ -1,7 +1,7 @@
-import Button from "./Button";
-import FilmStrip from "./FilmStrip";
+import MainImage from "./MainImage";
+import ImageThumb from "./ImageThumb";
 
 export { 
-    Button ,
-    FilmStrip
+    MainImage ,
+    ImageThumb
 };
