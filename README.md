@@ -1,4 +1,4 @@
-# Code Challenge #
+# Image Viewer #
 
 ## Table of Content:
 
