@@ -1,7 +1,7 @@
 import { ImageModel } from '@/models/image';
 import template from '@data/template.json';
 
-export const ImageData: ImageModel[] = template;
+export let ImageData: ImageModel[] = template;
 
 class ImageService {
     /**
@@ -31,6 +31,26 @@ class ImageService {
             end: end,
             total: ImageData.length
         }
+    }
+
+    /**
+     * Add a new field and value
+     * @param id An id to be updated
+     * @param fieldName A new field
+     * @param value And it's value
+     */
+    addThumbnail(title: string, cost: string, image: string, thumbnail: string, description: string) {
+        const newImage: ImageModel = {
+            title: title,
+            cost: cost,
+            id: Date.now().toString(),
+            description: description,
+            thumbnail: thumbnail,
+            image: image,
+        };
+
+        ImageData.push(newImage);
+        return newImage;
     }
 
     /**

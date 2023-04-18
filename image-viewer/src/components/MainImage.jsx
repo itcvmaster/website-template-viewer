@@ -16,23 +16,12 @@ function MainImage(props) {
             />
 
             <div className="details">
-                <strong> ID </strong>
-                <p> {selectedThumb?.id || "N/A"} </p>
-
-                <strong> Title </strong>
-                <p> {selectedThumb?.title || "N/A"} </p>
-
-                <strong> Cost </strong>
-                <p> {selectedThumb?.cost || "N/A"} </p>
-
-                <strong> Description </strong>
-                <p> {selectedThumb?.description || "N/A"} </p>
-
-                <strong> Thumbnail File Name </strong>
-                <p> {selectedThumb?.thumbnail || "N/A"} </p>
-
-                <strong> Image File Name </strong>
-                <p> {selectedThumb?.image || "N/A"} </p>
+                {selectedThumb && Object.keys(selectedThumb).map((field) => (
+                   <>
+                    <strong key={field.id}> {field} </strong>
+                    <p key={field.id}> {selectedThumb[field] || "N/A"} </p>
+                   </> 
+                ))}
             </div>
         </div>
     )

@@ -35,5 +35,14 @@ export const ImageApi = createApi({
             providesTags: [tagTypes.Images],
             transformResponse: (response) => baseTransform(response, validateImages),
         }),
+        addField: builder.mutation({
+            query: (payload) => ({
+                url: `/api/images/append`,
+                method: "POST",
+                body: payload,
+            }),
+            invalidatesTags: [tagTypes.Images],
+            transformResponse: (response) => baseTransform(response, validateImages),
+        }),
     }),
 });

@@ -15,6 +15,19 @@ class ImageController {
     }
 
     /**
+      * POST /api/images
+      * @param {*} req A request 
+      * @param {*} res A response
+      * @returns a new thumbnail data
+    */
+    append(req: Request, res: Response) {
+        const { title, cost, image, thumbnail, description } = req.body;
+        const updatedImage = imageService.addThumbnail(String(title), String(cost), String(image), String(thumbnail), String(description));
+        res.status(200).json(updatedImage);
+    }
+
+    
+    /**
       * GET /api/images/count
       * @param {*} _req A request 
       * @param {*} res A response to send
