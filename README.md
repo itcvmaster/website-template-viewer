@@ -1,4 +1,4 @@
-# Code ChallengeCode Challenge #
+# Code Challenge #
 
 ## Table of Content:
 
@@ -44,7 +44,7 @@ I implemented some additional features for scalability.
   ```
 ## Screenshots
 
-![Snapshots](https://bitbucket.org/kw413/website-template-viewer/raw/fd470611681aa1822bbe2732486d13f3bdb6fc1f/snapshots.gif)
+![Snapshots](https://github.com/itcvmaster/website-template-viewer/blob/master/snapshots.gif)
 
 
 ## Technologies
